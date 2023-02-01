@@ -1,0 +1,438 @@
+@import "variables";
+@import "mixines";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Maven pro";
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: $darkBrown;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $green;
+  border-radius: 5px;
+}
+
+body {
+  width: 100%;
+  .content {
+    width: inherit;
+    height: max-content;
+    background-color: $light;
+    header {
+      background-color: $darkBrown;
+      width: inherit;
+      height: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      .menu {
+        height: 30px;
+        width: 30px;
+        color: $white;
+        margin-left: 22px;
+      }
+      .logo {
+        width: 40px;
+        height: 40px;
+      }
+      .cart {
+        height: 30px;
+        width: 30px;
+        color: $white;
+        margin-right: 22px;
+        cursor: pointer;
+      }
+      .container-icon {
+        position: relative;
+      }
+      .count-products {
+        position: absolute;
+        top: 55%;
+        right: 15px;
+        background-color: $green;
+        color: $white;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        cursor: pointer;
+        #product-counter {
+          font-family: "Maven pro";
+          font-weight: 600;
+          font-size: 12px;
+        }
+      }
+      .container-cart-products {
+        position: absolute;
+        top: 40px;
+        right: 15px;
+        border-radius: 10px;
+        background-color: $white;
+        width: 280px;
+        z-index: 1;
+        box-shadow: 0 10px 23px rgba(#000, $alpha: 0.4);
+        .row-product {
+          .cart-product {
+            display: flex;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-family: "Maven pro";
+            border-bottom: 1px solid $light;
+            .info-cart-product {
+              display: flex;
+              justify-content: space-between;
+              flex: 0.9;
+              color: $green;
+              .product-quantity {
+                font-size: 16px;
+                font-weight: 600;
+                margin-right: 10px;
+              }
+              .product-cart-title {
+                font-size: 16px;
+                font-weight: 600;
+              }
+              .product-cart-price {
+                font-weight: 700;
+                font-size: 16px;
+                margin-left: 10px;
+              }
+            }
+            .icon-close {
+              width: 20px;
+              height: 20px;
+              transition: all 0.275s;
+              cursor: pointer;
+            }
+            .icon-close:hover {
+              color: red;
+            }
+          }
+        }
+        .container-cart-total {
+          display: flex;
+          justify-content: center;
+          align-items: baseline;
+          flex-direction: row;
+          padding: 10px;
+          gap: 20px;
+          font-family: "Maven pro";
+          h3 {
+            font-size: 16px;
+            font-weight: 700;
+          }
+          .cart-total {
+            font-size: 16px;
+            font-weight: 800;
+          }
+        }
+      }
+      .hidden-cart {
+        display: none;
+      }
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input {
+        width: 310px;
+        height: 32px;
+        font-family: "Maven pro";
+        border-radius: 50px;
+        color: $light;
+        background-color: $white;
+        text-align: center;
+        margin-top: 10px;
+      }
+      .categories {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 9.3px;
+        gap: 9.29px;
+        width: 331.71px;
+        height: 52.14px;
+        margin-top: 10px;
+        .category {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          padding: 9.3px;
+          gap: 9.29px;
+          border-radius: 5px;
+          font-family: "Maven pro";
+          font-weight: 900;
+          font-size: 13px;
+          line-height: 15px;
+          transition: 0.1s ease-in;
+          &.todos {
+            width: 55.57px;
+            height: 33.57;
+            background-color: $green;
+            color: $white;
+            flex: none;
+            order: 0;
+          }
+          &.cafes {
+            width: 53.57px;
+            height: 33.57;
+            background-color: $white;
+            color: $green;
+            flex: none;
+            order: 1;
+          }
+          &.endulzantes {
+            width: 96.57px;
+            height: 33.57;
+            background-color: $white;
+            color: $green;
+            flex: none;
+            order: 2;
+          }
+          &.maquinas {
+            width: 79.57px;
+            height: 33.57;
+            background-color: $white;
+            color: $green;
+            flex: none;
+            order: 3;
+          }
+        }
+        .category:hover {
+          scale: 0.95;
+        }
+      }
+
+      .main-title {
+        width: 245px;
+        height: 27px;
+        font-family: "Maven Pro";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 27px;
+        color: $green;
+      }
+      .container-products {
+        display: grid;
+        grid-template-columns: repeat(2, 151.52px);
+        grid-template-rows: repeat(autofill, 207.8px);
+        gap: 22px;
+        margin-top: 12px;
+        .product {
+          @include ProductCard;
+        }
+        .product:hover {
+          scale: 1.05;
+        }
+      }
+    }
+    footer {
+      position: relative;
+      width: inherit;
+      height: 200px;
+      margin-top: 22px;
+      background: $darkBrown;
+      p {
+        font-family: "Maven pro";
+        position: absolute;
+        color: $white;
+        top: 11px;
+        left: 22px;
+      }
+      .phone {
+        position: absolute;
+        color: $white;
+        height: 16px;
+        width: 16px;
+        left: 22px;
+        top: 36px;
+      }
+      .number {
+        position: absolute;
+        top: 36px;
+        left: 42px;
+        font-family: "Maven pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: $white;
+      }
+      .icon-mail {
+        position: absolute;
+        color: $white;
+        height: 16px;
+        width: 16px;
+        left: 22px;
+        top: 60px;
+      }
+      .mail {
+        position: absolute;
+        top: 60px;
+        left: 42px;
+        font-family: "Maven pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        color: $white;
+      }
+      #line {
+        position: absolute;
+        width: 300px;
+        height: 0px;
+        left: 30px;
+        top: 90px;
+        border: 1px solid $white;
+      }
+      .redes {
+        position: absolute;
+        font-family: "Maven pro";
+        color: $white;
+        left: 22px;
+        top: 102px;
+      }
+      .red-icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        color: $white;
+        top: 132px;
+      }
+      .tiktok {
+        left: 22px;
+      }
+      .instagram {
+        left: 48px;
+      }
+      .facebook {
+        left: 75px;
+      }
+      .whatsapp {
+        left: 104px;
+      }
+      .copyrigth {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        left: 75px;
+        top: 171px;
+        color: $white;
+      }
+      .copyrigth-text {
+        font-family: "Maven pro";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        top: 171px;
+        left: 92px;
+        color: $white;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    .content {
+      width: inherit;
+      height: max-content;
+      header {
+        .container-cart-products {
+          width: 350px;
+        }
+      }
+      main {
+        input {
+          width: 510px;
+          color: $green;
+          flex-direction: row;
+        }
+        .categories {
+          flex-direction: row;
+        }
+        .container-products {
+          grid-template-columns: repeat(4, 151.52px);
+          grid-template-rows: repeat(autofill, 207.8px);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    //width: 100%;
+    .content {
+      width: inherit;
+      height: max-content;
+      header {
+        .container-cart-products {
+          width: 410px;
+        }
+      }
+      main {
+        input {
+          width: 710px;
+          color: $green;
+          flex-direction: row;
+        }
+        .categories {
+          flex-direction: row;
+        }
+        .container-products {
+          grid-template-columns: repeat(5, 151.52px);
+          grid-template-rows: repeat(autofill, 207.8px);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    //width: 100%;
+    .content {
+      width: inherit;
+      height: max-content;
+      header {
+        .container-cart-products {
+          width: 410px;
+        }
+      }
+      main {
+        input {
+          width: 710px;
+          color: $green;
+          flex-direction: row;
+        }
+        .categories {
+          flex-direction: row;
+        }
+        .container-products {
+          grid-template-columns: repeat(5, 151.52px);
+          grid-template-rows: repeat(autofill, 207.8px);
+        }
+      }
+    }
+  }
+}

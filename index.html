@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="shorcut icon" href="favicon.ico" />
+  <title>Dev{}Coffee</title>
+</head>
+
+<body>
+  <div class="content">
+    <header>
+      <!-- Toogle menu -->
+      <svg class="menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category" width="24"
+        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 4h6v6h-6z"></path>
+        <path d="M14 4h6v6h-6z"></path>
+        <path d="M4 14h6v6h-6z"></path>
+        <circle cx="17" cy="17" r="3"></circle>
+      </svg>
+      <img class="logo" src="./assets/img/Logo_75x75.png" alt="Logo" />
+      <!-- Cart -->
+      <div class="container-icon">
+        <svg class="cart" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart"
+          width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <circle cx="6" cy="19" r="2"></circle>
+          <circle cx="17" cy="19" r="2"></circle>
+          <path d="M17 17h-11v-14h-2"></path>
+          <path d="M6 5l14 1l-1 7h-13"></path>
+        </svg>
+        <div class="count-products">
+          <span id="product-counter"> 0 </span>
+        </div>
+        <div class="container-cart-products hidden-cart">
+          <div class="row-product">
+            <div class="cart-product">
+              <div class="info-cart-product">
+                <span class="product-quantity"> 1 </span>
+                <p class="product-cart-title">Cafe fuerte</p>
+                <span class="product-cart-price">$52.000</span>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-close" class="icon icon-tabler icon-tabler-circle-x"
+                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M10 10l4 4m0 -4l-4 4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="container-cart-total">
+            <h3>Total:</h3>
+            <span class="cart-total"> $52.000 </span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Buscador -->
+      <input type="search" placeholder="Buscar..." />
+      <!-- Botones de categoria -->
+      <div class="categories">
+        <button class="category todos">Todos</button>
+        <button class="category cafes">Cafes</button>
+        <button class="category endulzantes">Endulzantes</button>
+        <button class="category maquinas">Maquinas</button>
+      </div>
+      <!-- Titulo -->
+      <h1 class="main-title">Productos Destacados</h1>
+      <!-- Seccion de productos -->
+      <div class="container-products">
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Cafe fuerte</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$52000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Cafe con leche</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$35000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Endulzante</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$40000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Maquina cafetera</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$980000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Cafe suave</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$50000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Espumador</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$130000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Cafetera francesa</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$70000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Cafetera italiana</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$75000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Taza Phyton</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$25000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+
+        <div class="product">
+          <div class="image"></div>
+          <p class="name">Pato de ule</p>
+          <p class="description">Descripcion del producto</p>
+          <p class="price">$5000</p>
+          <button class="btn-add-cart">
+            Agregar
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- Formas de contacto -->
+      <p>Contacto</p>
+      <!-- Telefono -->
+      <svg class="phone" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24"
+        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+        </path>
+      </svg>
+      <p class="number">(+57) 300-123-4567</p>
+      <!-- Email -->
+      <svg class="icon-mail" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at" width="24"
+        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
+      </svg>
+      <p class="mail">contact@email.com</p>
+      <div id="line"></div>
+      <!-- Redes sociales -->
+      <p class="redes">Siguenos</p>
+      <!-- Tik tok -->
+      <a href="https://www.tiktok.com/es/" target="_blank">
+        <svg class="red-icon tiktok" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-brand-tiktok" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5"></path>
+        </svg>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/chalarca.felipe/" target="_blank">
+        <svg class="red-icon instagram" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24"
+          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+          <circle cx="12" cy="12" r="3"></circle>
+          <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+        </svg>
+      </a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/felipe.martinezchalarca" target="_blank">
+        <svg class="red-icon facebook" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24"
+          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+        </svg>
+      </a>
+      <!-- Whatsapp -->
+      <a href="https://wa.me/573197934304" target="_blank">
+        <svg class="red-icon whatsapp" xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24"
+          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+          <path d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1">
+          </path>
+        </svg>
+      </a>
+      <!-- Copyrigth -->
+      <svg class="copyrigth" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright"
+        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M14 9.75a3.016 3.016 0 0 0 -4.163 .173a2.993 2.993 0 0 0 0 4.154a3.016 3.016 0 0 0 4.163 .173"></path>
+      </svg>
+      <p class="copyrigth-text">Dev-Coffee 2022 all rights reserved</p>
+    </footer>
+  </div>
+</body>
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</html>
